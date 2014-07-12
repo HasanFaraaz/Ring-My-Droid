@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ring My Droid</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="default_keyword">RingMyDroid</string>
+    <string name="enterkeyword">Enter your Key Phrase</string>
+    <string name="click_stop_alarm">Click the button below to stop the alarm.</string>
+    <string name="found_phone">Found Phone!</string>
+    <string name="set_keyphrase">Set your Key Phrase</string>
+    <string name="set">Set</string>
+
+</resources>

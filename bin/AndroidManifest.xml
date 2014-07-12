@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ramandeepbakshi.ringmydroid"
+    android:versionCode="2"
+    android:versionName="1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="17" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.ramandeepbakshi.ringmydroid.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <receiver android:name="com.ramandeepbakshi.ringmydroid.IncomingSms">
+            <intent-filter >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        
+        <activity
+            android:name="com.ramandeepbakshi.ringmydroid.SMSProcessor"
+            android:label="@string/app_name"
+    		android:theme="@style/Invisible" 
+    		android:noHistory="true" />
+        
+        <activity
+            android:name="com.ramandeepbakshi.ringmydroid.AlarmRinger" />
+        
+        <activity
+            android:name="com.ramandeepbakshi.ringmydroid.AboutActivity"
+            android:screenOrientation="portrait" />
+        
+    </application>
+
+</manifest>
